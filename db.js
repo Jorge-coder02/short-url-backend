@@ -7,7 +7,9 @@ const server = net.createServer();
 
 const app = express();
 const PORT = 3001;
-const MONGO_URI = "mongodb://127.0.0.1:27017/urls";
+
+require("dotenv").config();
+const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/urls"; // default para pruebas local
 
 // Middleware
 app.use(json());
