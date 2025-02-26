@@ -4,11 +4,10 @@ import cors from "cors";
 import router from "./url_routes.js";
 import net from "net";
 const server = net.createServer();
-
 const app = express();
 const PORT = 3001;
-
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/urls"; // default para pruebas local
 
 // Middleware
