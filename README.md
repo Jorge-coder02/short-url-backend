@@ -7,7 +7,7 @@ https://short-url-frontend-khaki.vercel.app/
 
 [![Licencia](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
-🔗 **Visitar:** [Ver en vivo]([https://growbit.netlify.app/](https://short-url-frontend-khaki.vercel.app/))
+🔗 **Visitar:** [Ver en vivo](https://short-url-frontend-khaki.vercel.app/)
 
 ## 🚀 ¿Cómo funciona?
 
