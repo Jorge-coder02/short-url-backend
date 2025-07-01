@@ -3,30 +3,37 @@ https://short-url-frontend-khaki.vercel.app/
 
 # 👩‍💻🏛 ShortUrl (Acortador de enlaces)
 
-**[![Status](https://img.shields.io/badge/Status-🚧_In_Progress-FFA500)](https://github.com/Jorge-coder02/short-url-backend)**
+[![Status](https://img.shields.io/badge/Status-✅_Ready-28A745)](https://github.com/Jorge-coder02/short-url-backend)
+
 [![Licencia](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 🔗 **Visitar:** [Ver en vivo]([https://growbit.netlify.app/](https://short-url-frontend-khaki.vercel.app/))
 
+## 🚀 ¿Cómo funciona?
 
-## ¿Cómo funciona? 
-Este backend actúa como un servicio de acortamiento de URLs. El flujo principal es el siguiente:
+Este backend actúa como un servicio de **acortamiento de URLs**. El flujo principal es el siguiente:
 
-Recepción de la URL original:
-El usuario envía una URL larga a través de una petición al backend.
+1. **Recepción de la URL original:**  
+   El usuario envía una URL larga mediante una petición al backend.
 
-Generación y almacenamiento:
-Se genera un identificador único corto (un nanoid de 6 caracteres) que sirve como clave para la URL.
-Este par { id_corto, url_original } se guarda en una base de datos MongoDB para su posterior recuperación.
+2. **Generación y almacenamiento:**  
+   - Se genera un identificador único corto usando [`nanoid`](https://github.com/ai/nanoid) de 6 caracteres.  
+   - Se guarda en la base de datos MongoDB el par `{ id_corto, url_original }` para futuras consultas.
 
-Devolución de la URL corta:
-El backend responde al usuario con la URL acortada que incluye el id generado, por ejemplo:
-https://tu-dominio.com/abc123
+3. **Devolución de la URL corta:**  
+   El backend responde con la URL acortada que contiene el `id` generado, por ejemplo:  
+   `https://tu-dominio.com/abc123`
 
-Redirección a la URL original:
-Cuando alguien visita la URL corta, el backend recibe el id como parámetro, busca en la base de datos la URL original asociada y redirige al usuario hacia esa dirección.
+4. **Redirección a la URL original:**  
+   Cuando alguien accede a la URL corta:  
+   - El backend recibe el `id` como parámetro.  
+   - Consulta en MongoDB la URL original asociada.  
+   - Redirige al usuario a esa URL original.
 
-Así, el backend funciona como intermediario que guarda y traduce URLs largas en versiones cortas fáciles de compartir, manteniendo un sistema eficiente y escalable con MongoDB y nanoid.
+---
+
+Así, el backend funciona como intermediario, guardando y traduciendo URLs largas en versiones cortas fáciles de compartir, con un sistema eficiente y escalable basado en MongoDB y nanoid.
+
 
 ## 🚀 Tecnologías Principales
 ![React](https://img.shields.io/badge/React-19.0.0-61DAFB?logo=react)
