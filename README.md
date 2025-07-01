@@ -1,6 +1,97 @@
 # Enlace de la página (front)
 https://short-url-frontend-khaki.vercel.app/
 
-# Tecnologías usadas: 
-Nodejs + Express, MongoDB. Servidor desplegado en Render
+# 👩‍💻🏛 ShortUrl (Acortador de enlaces)
+
+**[![Status](https://img.shields.io/badge/Status-🚧_In_Progress-FFA500)](https://github.com/Jorge-coder02/short-url-backend)**
+[![Licencia](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+
+🔗 **Visitar:** [Ver en vivo]([https://growbit.netlify.app/](https://short-url-frontend-khaki.vercel.app/))
+
+
+## ¿Cómo funciona? 
+Este backend actúa como un servicio de acortamiento de URLs. El flujo principal es el siguiente:
+
+Recepción de la URL original:
+El usuario envía una URL larga a través de una petición al backend.
+
+Generación y almacenamiento:
+Se genera un identificador único corto (un nanoid de 6 caracteres) que sirve como clave para la URL.
+Este par { id_corto, url_original } se guarda en una base de datos MongoDB para su posterior recuperación.
+
+Devolución de la URL corta:
+El backend responde al usuario con la URL acortada que incluye el id generado, por ejemplo:
+https://tu-dominio.com/abc123
+
+Redirección a la URL original:
+Cuando alguien visita la URL corta, el backend recibe el id como parámetro, busca en la base de datos la URL original asociada y redirige al usuario hacia esa dirección.
+
+Así, el backend funciona como intermediario que guarda y traduce URLs largas en versiones cortas fáciles de compartir, manteniendo un sistema eficiente y escalable con MongoDB y nanoid.
+
+## 🚀 Tecnologías Principales
+![React](https://img.shields.io/badge/React-19.0.0-61DAFB?logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.1-06B6D4?logo=tailwind-css)
+![Node.js](https://img.shields.io/badge/Node.js-20.0.0-339933?logo=node.js)
+![Express](https://img.shields.io/badge/Express-4.18.2-000000?logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-6.0.5-47A248?logo=mongodb)
+
+## ✨ Características Destacadas
+- ✅ Validación de url correcta
+- ✅ Loading spinner de carga en peticiones al back
+- ✅ Diseño responsive
+
+## 📦 Instalación
+
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/Jorge-coder02/short-url-backend.git
+cd short-url-backend
+```
+
+2. **Instalar dependencias**
+ ```bash
+ npm install
+```
+o si usas Yarn
+```bash
+yarn install
+ ```
+
+3. **Ejecutar en modo desarrollo**
+  ```bash
+  npm run dev
+  ```
+  ## El servidor estará disponible en:
+  ## http://localhost:3000
+
+
+## 🗂️ Estructura del Proyecto
+
+```plaintext
+📦 root
+├── .gitignore                 # Configuración de archivos ignorados por Git
+├── README.md                  # 📄 Documentación del proyecto
+├── Url.js                     # 🚦 Configuración de URLs / Endpoints
+├── db.js                      # 🛢️ Configuración y conexión a MongoDB
+├── package.json               # 📦 Dependencias y scripts Node.js
+├── package-lock.json          # 🔒 Versionado exacto de dependencias
+└── url_routes.js              # 🛣️ Definición de rutas backend (API)
+
+```
+
+
+# Versiones
+
+- cors: "^2.8.5",
+- dotenv: "^16.4.7",
+- express: "^4.21.2",
+- mongoose: "^8.10.1",
+- nanoid: "^5.1.0"
+
+
+## Dependencias de desarrollo:
+
+- nodemon: "^3.1.9"
+
+
 
